@@ -2,11 +2,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 h1 {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 50px;
 }
 
 h2 {
@@ -26,6 +29,14 @@ button {
     border-radius: 5px;
 }
 
+#increment-btn:hover{
+    background: darkblue;
+}
+
 #increment-btn {
     background: darkred;
+}
+
+#save-btn {
+    background: rgb(0, 93, 139);
 }
