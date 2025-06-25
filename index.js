@@ -6,10 +6,13 @@ let count = 0;
 
 function increment() {
     count += 1;
-    countEl.innerText = count;
+    countEl.textContent = count;
 }
 
 function save() {
     let countStr = count + " - ";
-    saveEl.innerText = saveEl.innerText + countStr;
-}
+    saveEl.textContent = saveEl.textContent + countStr;
+
+    count = 0;
+    countEl.textContent = count;
+} 

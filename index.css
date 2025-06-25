@@ -1,42 +1,57 @@
 body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    color: #333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
-    background-repeat: repeat-y;
-    background-size: cover;
 }
 
-h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 50px;
+/* Pseudo-element for the background image with fade */
+body::before {
+    content: ''; /* Essential for pseudo-elements */
+    position: fixed; /* Use fixed to ensure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('download.jpg'); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    opacity: 0.3; /* Adjust this value (0.0 to 1.0) for desired fade */
+    z-index: -1; /* Puts the background image behind all content */
 }
 
-h2 {
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 20px;
+/* Basic styling for your content to make it more visible */
+h2, h1, p {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly opaque white background for text */
+    padding: 10px;
+    border-radius: 5px;
+    display: block; /* Helps background-color wrap content */
+    margin: 5px auto;
+    font-size: xx-large;
+     /* Centering for block elements */
+    width: fit-content; /* Adjust width to content */
 }
 
 button {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: inline; /* Make buttons block elements */
+    margin: 10px auto; /* Center buttons */
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #0353a9;
     color: white;
-    font-weight: bold;
-    width: 200px;
-    margin-bottom: 5px;
+    border: none;
     border-radius: 5px;
 }
 
-#increment-btn:hover{
-    background: darkblue;
-}
-
-#increment-btn {
-    background: darkred;
-}
-
-#save-btn {
-    background: rgb(0, 93, 139);
+button:hover {
+    background-color: brown;
 }
